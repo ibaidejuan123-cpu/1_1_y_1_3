@@ -27,7 +27,7 @@
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
-        <script src="js/l.control.layers.Tree.min.js"></script>
+        <script src="js/l.control.layers.tree.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -123,10 +123,10 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
                 popup._contentNode.classList.remove('media');
             }
         }
-        var zoomControl = L.control.zoom({
+        var zoomControl = l.control.zoom({
             position: 'topleft'
         }).addTo(map);
-        var measureControl = new L.Control.Measure({
+        var measureControl = new l.control.Measure({
             position: 'topleft',
             primaryLengthUnit: 'meters',
             secondaryLengthUnit: 'kilometers',
@@ -346,7 +346,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         map.getPane('pane_Municipios_2').style.zIndex = 402;
         map.getPane('pane_Municipios_2').style['mix-blend-mode'] = 'normal';
         
-        function pop_Potenciainstaladapormunicipio_3(feature, layer) {
+        function pop_potenciainstaladapormunicipio_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -458,10 +458,10 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Potenciainstaladapormunicipio_3_0(feature) {
+        function style_potenciainstaladapormunicipio_3_0(feature) {
             if (feature.properties['2024'] >= 0.010000 && feature.properties['2024'] <= 4.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_potenciainstaladapormunicipio_3',
                 radius: 1.5,
                 stroke: false,
                 fill: true,
@@ -472,7 +472,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 4.990000 && feature.properties['2024'] <= 99.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_potenciainstaladapormunicipio_3',
                 radius: 2.0,
                 stroke: false,
                 fill: true,
@@ -483,7 +483,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 99.990000 && feature.properties['2024'] <= 999.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_potenciainstaladapormunicipio_3',
                 radius: 4.0,
                 stroke: false,
                 fill: true,
@@ -494,7 +494,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 999.990000 && feature.properties['2024'] <= 9999.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_potenciainstaladapormunicipio_3',
                 radius: 6.0,
                 stroke: false,
                 fill: true,
@@ -505,7 +505,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 9999.990000 && feature.properties['2024'] <= 49999.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_potenciainstaladapormunicipio_3',
                 radius: 8.0,
                 stroke: false,
                 fill: true,
@@ -516,7 +516,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 49999.990000 && feature.properties['2024'] <= 750000.000000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_potenciainstaladapormunicipio_3',
                 radius: 10.0,
                 stroke: false,
                 fill: true,
@@ -526,27 +526,27 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             }
         }
-        map.createPane('pane_Potenciainstaladapormunicipio_3');
-        map.getPane('pane_Potenciainstaladapormunicipio_3').style.zIndex = 403;
-        map.getPane('pane_Potenciainstaladapormunicipio_3').style['mix-blend-mode'] = 'normal';
-        var layer_Potenciainstaladapormunicipio_3 = new L.geoJson(json_Potenciainstaladapormunicipio_3, {
+        map.createPane('pane_potenciainstaladapormunicipio_3');
+        map.getPane('pane_potenciainstaladapormunicipio_3').style.zIndex = 403;
+        map.getPane('pane_potenciainstaladapormunicipio_3').style['mix-blend-mode'] = 'normal';
+        var layer_potenciainstaladapormunicipio_3 = new L.geoJson(json_potenciainstaladapormunicipio_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Potenciainstaladapormunicipio_3',
-            layerName: 'layer_Potenciainstaladapormunicipio_3',
-            pane: 'pane_Potenciainstaladapormunicipio_3',
-            onEachFeature: pop_Potenciainstaladapormunicipio_3,
+            dataVar: 'json_potenciainstaladapormunicipio_3',
+            layerName: 'layer_potenciainstaladapormunicipio_3',
+            pane: 'pane_potenciainstaladapormunicipio_3',
+            onEachFeature: pop_potenciainstaladapormunicipio_3,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Potenciainstaladapormunicipio_3_0(feature));
+                return L.circleMarker(latlng, style_potenciainstaladapormunicipio_3_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Potenciainstaladapormunicipio_3);
-        map.addLayer(layer_Potenciainstaladapormunicipio_3);
-        function pop_Nmerodeinstalacionespormunicipio_4(feature, layer) {
+        bounds_group.addLayer(layer_potenciainstaladapormunicipio_3);
+        map.addLayer(layer_potenciainstaladapormunicipio_3);
+        function pop_nmerodeinstalacionespormunicipio_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -658,10 +658,10 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Nmerodeinstalacionespormunicipio_4_0(feature) {
+        function style_nmerodeinstalacionespormunicipio_4_0(feature) {
             if (feature.properties['2024'] >= 0.010000 && feature.properties['2024'] <= 4.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_nmerodeinstalacionespormunicipio_4',
                 radius: 1.5,
                 stroke: false,
                 fill: true,
@@ -672,7 +672,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 4.990000 && feature.properties['2024'] <= 9.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_nmerodeinstalacionespormunicipio_4',
                 radius: 2.0,
                 stroke: false,
                 fill: true,
@@ -683,7 +683,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 9.990000 && feature.properties['2024'] <= 49.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_nmerodeinstalacionespormunicipio_4',
                 radius: 4.0,
                 stroke: false,
                 fill: true,
@@ -694,7 +694,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 49.990000 && feature.properties['2024'] <= 99.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_nmerodeinstalacionespormunicipio_4',
                 radius: 6.0,
                 stroke: false,
                 fill: true,
@@ -705,7 +705,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 99.990000 && feature.properties['2024'] <= 499.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_nmerodeinstalacionespormunicipio_4',
                 radius: 8.0,
                 stroke: false,
                 fill: true,
@@ -716,7 +716,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 499.990000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_nmerodeinstalacionespormunicipio_4',
                 radius: 10.0,
                 stroke: false,
                 fill: true,
@@ -726,29 +726,29 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             }
         }
-        map.createPane('pane_Nmerodeinstalacionespormunicipio_4');
-        map.getPane('pane_Nmerodeinstalacionespormunicipio_4').style.zIndex = 404;
-        map.getPane('pane_Nmerodeinstalacionespormunicipio_4').style['mix-blend-mode'] = 'normal';
-        var layer_Nmerodeinstalacionespormunicipio_4 = new L.geoJson(json_Nmerodeinstalacionespormunicipio_4, {
+        map.createPane('pane_nmerodeinstalacionespormunicipio_4');
+        map.getPane('pane_nmerodeinstalacionespormunicipio_4').style.zIndex = 404;
+        map.getPane('pane_nmerodeinstalacionespormunicipio_4').style['mix-blend-mode'] = 'normal';
+        var layer_nmerodeinstalacionespormunicipio_4 = new L.geoJson(json_nmerodeinstalacionespormunicipio_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Nmerodeinstalacionespormunicipio_4',
-            layerName: 'layer_Nmerodeinstalacionespormunicipio_4',
-            pane: 'pane_Nmerodeinstalacionespormunicipio_4',
-            onEachFeature: pop_Nmerodeinstalacionespormunicipio_4,
+            dataVar: 'json_nmerodeinstalacionespormunicipio_4',
+            layerName: 'layer_nmerodeinstalacionespormunicipio_4',
+            pane: 'pane_nmerodeinstalacionespormunicipio_4',
+            onEachFeature: pop_nmerodeinstalacionespormunicipio_4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Nmerodeinstalacionespormunicipio_4_0(feature));
+                return L.circleMarker(latlng, style_nmerodeinstalacionespormunicipio_4_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Nmerodeinstalacionespormunicipio_4);
-        map.addLayer(layer_Nmerodeinstalacionespormunicipio_4);
+        bounds_group.addLayer(layer_nmerodeinstalacionespormunicipio_4);
+        map.addLayer(layer_nmerodeinstalacionespormunicipio_4);
         const url = {"Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
         "France BAN": "https://api-adresse.data.gouv.fr/search/?"}
-        var photonControl = L.control.photon({
+        var photonControl = l.control.photon({
             url: url["Nominatim OSM"],
             feedbackLabel: '',
             position: 'topleft',
@@ -800,10 +800,10 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
         });
         var overlaysTree = [
-            {label: 'Número de instalaciones por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_50.png" /></td><td><5</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_5101.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_10502.png" /></td><td>10 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_501003.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_1005004.png" /></td><td>100 - 500</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_5009005.png" /></td><td>500 - 900</td></tr></table>', layer: layer_Nmerodeinstalacionespormunicipio_4},
-            {label: 'Potencia instalada por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_5KW0.png" /></td><td><5 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_5100KW1.png" /></td><td>5 - 100 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_100KW1MW2.png" /></td><td>100 KW - 1 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_110MW3.png" /></td><td>1 - 10 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_1050MW4.png" /></td><td>10 - 50 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_50750MW5.png" /></td><td>50 - 750 MW</td></tr></table>', layer: layer_Potenciainstaladapormunicipio_3},
+            {label: 'Número de instalaciones por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/nmerodeinstalacionespormunicipio_4_50.png" /></td><td><5</td></tr><tr><td style="text-align: center;"><img src="legend/nmerodeinstalacionespormunicipio_4_5101.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/nmerodeinstalacionespormunicipio_4_10502.png" /></td><td>10 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/nmerodeinstalacionespormunicipio_4_501003.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/nmerodeinstalacionespormunicipio_4_1005004.png" /></td><td>100 - 500</td></tr><tr><td style="text-align: center;"><img src="legend/nmerodeinstalacionespormunicipio_4_5009005.png" /></td><td>500 - 900</td></tr></table>', layer: layer_nmerodeinstalacionespormunicipio_4},
+            {label: 'potencia instalada por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/potenciainstaladapormunicipio_3_5KW0.png" /></td><td><5 KW</td></tr><tr><td style="text-align: center;"><img src="legend/potenciainstaladapormunicipio_3_5100KW1.png" /></td><td>5 - 100 KW</td></tr><tr><td style="text-align: center;"><img src="legend/potenciainstaladapormunicipio_3_100KW1MW2.png" /></td><td>100 KW - 1 MW</td></tr><tr><td style="text-align: center;"><img src="legend/potenciainstaladapormunicipio_3_110MW3.png" /></td><td>1 - 10 MW</td></tr><tr><td style="text-align: center;"><img src="legend/potenciainstaladapormunicipio_3_1050MW4.png" /></td><td>10 - 50 MW</td></tr><tr><td style="text-align: center;"><img src="legend/potenciainstaladapormunicipio_3_50750MW5.png" /></td><td>50 - 750 MW</td></tr></table>', layer: layer_potenciainstaladapormunicipio_3},
             ]
-        var lay = L.control.layers.tree(null, overlaysTree,{
+        var lay = l.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
             //closedSymbol: '&#8862; &#x1f5c0;',
