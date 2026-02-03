@@ -37,8 +37,8 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/Potenciainstaladapormunicipio_3.js"></script>
-        <script src="data/Nmerodeinstalacionespormunicipio_4.js"></script>
+        <script src="data/Potenciainstaladapormunicipio_0.js"></script>
+        <script src="data/Nmerodeinstalacionespormunicipio_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
@@ -139,214 +139,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_ComunidadesAutnomas_0(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['INSPIREID'] !== null ? autolinker.link(String(feature.properties['INSPIREID']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['COUNTRY'] !== null ? autolinker.link(String(feature.properties['COUNTRY']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEV'] !== null ? autolinker.link(String(feature.properties['NATLEV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEVNAME'] !== null ? autolinker.link(String(feature.properties['NATLEVNAME']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NAMEUNIT'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT1'] !== null ? autolinker.link(String(feature.properties['CODNUT1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT2'] !== null ? autolinker.link(String(feature.properties['CODNUT2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT3'] !== null ? autolinker.link(String(feature.properties['CODNUT3']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Area_m2'] !== null ? autolinker.link(String(feature.properties['Area_m2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Area_Ha'] !== null ? autolinker.link(String(feature.properties['Area_Ha']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_ComunidadesAutnomas_0_0() {
-            return {
-                pane: 'pane_ComunidadesAutnomas_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1, 
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_ComunidadesAutnomas_0');
-        map.getPane('pane_ComunidadesAutnomas_0').style.zIndex = 400;
-        map.getPane('pane_ComunidadesAutnomas_0').style['mix-blend-mode'] = 'normal';
-        
-        function pop_Provincias_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['INSPIREID'] !== null ? autolinker.link(String(feature.properties['INSPIREID']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['COUNTRY'] !== null ? autolinker.link(String(feature.properties['COUNTRY']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEV'] !== null ? autolinker.link(String(feature.properties['NATLEV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEVNAME'] !== null ? autolinker.link(String(feature.properties['NATLEVNAME']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NAMEUNIT'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT1'] !== null ? autolinker.link(String(feature.properties['CODNUT1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT2'] !== null ? autolinker.link(String(feature.properties['CODNUT2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT3'] !== null ? autolinker.link(String(feature.properties['CODNUT3']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Provincias_1_0() {
-            return {
-                pane: 'pane_Provincias_1',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1, 
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Provincias_1');
-        map.getPane('pane_Provincias_1').style.zIndex = 401;
-        map.getPane('pane_Provincias_1').style['mix-blend-mode'] = 'normal';
-        
-        function pop_Municipios_2(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['INSPIREID'] !== null ? autolinker.link(String(feature.properties['INSPIREID']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['COUNTRY'] !== null ? autolinker.link(String(feature.properties['COUNTRY']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEV'] !== null ? autolinker.link(String(feature.properties['NATLEV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEVNAME'] !== null ? autolinker.link(String(feature.properties['NATLEVNAME']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NAMEUNIT'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT1'] !== null ? autolinker.link(String(feature.properties['CODNUT1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT2'] !== null ? autolinker.link(String(feature.properties['CODNUT2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT3'] !== null ? autolinker.link(String(feature.properties['CODNUT3']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Sup_m2'] !== null ? autolinker.link(String(feature.properties['Sup_m2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['INSPIREID_'] !== null ? autolinker.link(String(feature.properties['INSPIREID_']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['COUNTRY_2'] !== null ? autolinker.link(String(feature.properties['COUNTRY_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEV_2'] !== null ? autolinker.link(String(feature.properties['NATLEV_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATLEVNA_1'] !== null ? autolinker.link(String(feature.properties['NATLEVNA_1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATCODE_2'] !== null ? autolinker.link(String(feature.properties['NATCODE_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NAMEUNIT_2'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT1_2'] !== null ? autolinker.link(String(feature.properties['CODNUT1_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT2_2'] !== null ? autolinker.link(String(feature.properties['CODNUT2_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODNUT3_2'] !== null ? autolinker.link(String(feature.properties['CODNUT3_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Sup_m2_2'] !== null ? autolinker.link(String(feature.properties['Sup_m2_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Municipios_2_0() {
-            return {
-                pane: 'pane_Municipios_2',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1, 
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Municipios_2');
-        map.getPane('pane_Municipios_2').style.zIndex = 402;
-        map.getPane('pane_Municipios_2').style['mix-blend-mode'] = 'normal';
-        
-        function pop_Potenciainstaladapormunicipio_3(feature, layer) {
+        function pop_Potenciainstaladapormunicipio_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -458,10 +251,10 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Potenciainstaladapormunicipio_3_0(feature) {
+        function style_Potenciainstaladapormunicipio_0_0(feature) {
             if (feature.properties['2024'] >= 0.010000 && feature.properties['2024'] <= 4.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_Potenciainstaladapormunicipio_0',
                 radius: 1.5,
                 stroke: false,
                 fill: true,
@@ -472,7 +265,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 4.990000 && feature.properties['2024'] <= 99.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_Potenciainstaladapormunicipio_0',
                 radius: 2.0,
                 stroke: false,
                 fill: true,
@@ -483,7 +276,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 99.990000 && feature.properties['2024'] <= 999.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_Potenciainstaladapormunicipio_0',
                 radius: 4.0,
                 stroke: false,
                 fill: true,
@@ -494,7 +287,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 999.990000 && feature.properties['2024'] <= 9999.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_Potenciainstaladapormunicipio_0',
                 radius: 6.0,
                 stroke: false,
                 fill: true,
@@ -505,7 +298,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 9999.990000 && feature.properties['2024'] <= 49999.990000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_Potenciainstaladapormunicipio_0',
                 radius: 8.0,
                 stroke: false,
                 fill: true,
@@ -516,7 +309,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 49999.990000 && feature.properties['2024'] <= 750000.000000 ) {
                 return {
-                pane: 'pane_Potenciainstaladapormunicipio_3',
+                pane: 'pane_Potenciainstaladapormunicipio_0',
                 radius: 10.0,
                 stroke: false,
                 fill: true,
@@ -526,27 +319,27 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             }
         }
-        map.createPane('pane_Potenciainstaladapormunicipio_3');
-        map.getPane('pane_Potenciainstaladapormunicipio_3').style.zIndex = 403;
-        map.getPane('pane_Potenciainstaladapormunicipio_3').style['mix-blend-mode'] = 'normal';
-        var layer_Potenciainstaladapormunicipio_3 = new L.geoJson(json_Potenciainstaladapormunicipio_3, {
+        map.createPane('pane_Potenciainstaladapormunicipio_0');
+        map.getPane('pane_Potenciainstaladapormunicipio_0').style.zIndex = 400;
+        map.getPane('pane_Potenciainstaladapormunicipio_0').style['mix-blend-mode'] = 'normal';
+        var layer_Potenciainstaladapormunicipio_0 = new L.geoJson(json_Potenciainstaladapormunicipio_0, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Potenciainstaladapormunicipio_3',
-            layerName: 'layer_Potenciainstaladapormunicipio_3',
-            pane: 'pane_Potenciainstaladapormunicipio_3',
-            onEachFeature: pop_Potenciainstaladapormunicipio_3,
+            dataVar: 'json_Potenciainstaladapormunicipio_0',
+            layerName: 'layer_Potenciainstaladapormunicipio_0',
+            pane: 'pane_Potenciainstaladapormunicipio_0',
+            onEachFeature: pop_Potenciainstaladapormunicipio_0,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Potenciainstaladapormunicipio_3_0(feature));
+                return L.circleMarker(latlng, style_Potenciainstaladapormunicipio_0_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Potenciainstaladapormunicipio_3);
-        map.addLayer(layer_Potenciainstaladapormunicipio_3);
-        function pop_Nmerodeinstalacionespormunicipio_4(feature, layer) {
+        bounds_group.addLayer(layer_Potenciainstaladapormunicipio_0);
+        map.addLayer(layer_Potenciainstaladapormunicipio_0);
+        function pop_Nmerodeinstalacionespormunicipio_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -658,10 +451,10 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Nmerodeinstalacionespormunicipio_4_0(feature) {
+        function style_Nmerodeinstalacionespormunicipio_1_0(feature) {
             if (feature.properties['2024'] >= 0.010000 && feature.properties['2024'] <= 4.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_Nmerodeinstalacionespormunicipio_1',
                 radius: 1.5,
                 stroke: false,
                 fill: true,
@@ -672,7 +465,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 4.990000 && feature.properties['2024'] <= 9.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_Nmerodeinstalacionespormunicipio_1',
                 radius: 2.0,
                 stroke: false,
                 fill: true,
@@ -683,7 +476,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 9.990000 && feature.properties['2024'] <= 49.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_Nmerodeinstalacionespormunicipio_1',
                 radius: 4.0,
                 stroke: false,
                 fill: true,
@@ -694,7 +487,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 49.990000 && feature.properties['2024'] <= 99.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_Nmerodeinstalacionespormunicipio_1',
                 radius: 6.0,
                 stroke: false,
                 fill: true,
@@ -705,7 +498,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 99.990000 && feature.properties['2024'] <= 499.990000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_Nmerodeinstalacionespormunicipio_1',
                 radius: 8.0,
                 stroke: false,
                 fill: true,
@@ -716,7 +509,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 499.990000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
-                pane: 'pane_Nmerodeinstalacionespormunicipio_4',
+                pane: 'pane_Nmerodeinstalacionespormunicipio_1',
                 radius: 10.0,
                 stroke: false,
                 fill: true,
@@ -726,26 +519,26 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             }
         }
-        map.createPane('pane_Nmerodeinstalacionespormunicipio_4');
-        map.getPane('pane_Nmerodeinstalacionespormunicipio_4').style.zIndex = 404;
-        map.getPane('pane_Nmerodeinstalacionespormunicipio_4').style['mix-blend-mode'] = 'normal';
-        var layer_Nmerodeinstalacionespormunicipio_4 = new L.geoJson(json_Nmerodeinstalacionespormunicipio_4, {
+        map.createPane('pane_Nmerodeinstalacionespormunicipio_1');
+        map.getPane('pane_Nmerodeinstalacionespormunicipio_1').style.zIndex = 401;
+        map.getPane('pane_Nmerodeinstalacionespormunicipio_1').style['mix-blend-mode'] = 'normal';
+        var layer_Nmerodeinstalacionespormunicipio_1 = new L.geoJson(json_Nmerodeinstalacionespormunicipio_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Nmerodeinstalacionespormunicipio_4',
-            layerName: 'layer_Nmerodeinstalacionespormunicipio_4',
-            pane: 'pane_Nmerodeinstalacionespormunicipio_4',
-            onEachFeature: pop_Nmerodeinstalacionespormunicipio_4,
+            dataVar: 'json_Nmerodeinstalacionespormunicipio_1',
+            layerName: 'layer_Nmerodeinstalacionespormunicipio_1',
+            pane: 'pane_Nmerodeinstalacionespormunicipio_1',
+            onEachFeature: pop_Nmerodeinstalacionespormunicipio_1,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Nmerodeinstalacionespormunicipio_4_0(feature));
+                return L.circleMarker(latlng, style_Nmerodeinstalacionespormunicipio_1_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Nmerodeinstalacionespormunicipio_4);
-        map.addLayer(layer_Nmerodeinstalacionespormunicipio_4);
+        bounds_group.addLayer(layer_Nmerodeinstalacionespormunicipio_1);
+        map.addLayer(layer_Nmerodeinstalacionespormunicipio_1);
         const url = {"Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
         "France BAN": "https://api-adresse.data.gouv.fr/search/?"}
         var photonControl = L.control.photon({
@@ -800,9 +593,8 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
         });
         var overlaysTree = [
-            {label: 'Número de instalaciones por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_50.png" /></td><td><5</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_5101.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_10502.png" /></td><td>10 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_501003.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_1005004.png" /></td><td>100 - 500</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_4_5009005.png" /></td><td>500 - 900</td></tr></table>', layer: layer_Nmerodeinstalacionespormunicipio_4},
-            {label: 'Potencia instalada por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_5KW0.png" /></td><td><5 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_5100KW1.png" /></td><td>5 - 100 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_100KW1MW2.png" /></td><td>100 KW - 1 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_110MW3.png" /></td><td>1 - 10 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_1050MW4.png" /></td><td>10 - 50 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_3_50750MW5.png" /></td><td>50 - 750 MW</td></tr></table>', layer: layer_Potenciainstaladapormunicipio_3},
-            ]
+            {label: 'Número de instalaciones por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_1_50.png" /></td><td><5</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_1_5101.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_1_10502.png" /></td><td>10 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_1_501003.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_1_1005004.png" /></td><td>100 - 500</td></tr><tr><td style="text-align: center;"><img src="legend/Nmerodeinstalacionespormunicipio_1_5009005.png" /></td><td>500 - 900</td></tr></table>', layer: layer_Nmerodeinstalacionespormunicipio_1},
+            {label: 'Potencia instalada por municipio<br /><table><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_0_5KW0.png" /></td><td><5 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_0_5100KW1.png" /></td><td>5 - 100 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_0_100KW1MW2.png" /></td><td>100 KW - 1 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_0_110MW3.png" /></td><td>1 - 10 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_0_1050MW4.png" /></td><td>10 - 50 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Potenciainstaladapormunicipio_0_50750MW5.png" /></td><td>50 - 750 MW</td></tr></table>', layer: layer_Potenciainstaladapormunicipio_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
